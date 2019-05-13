@@ -11,6 +11,7 @@ module.exports = {
         // './src/polyfills',
         // app entry file
         // './src'
+        // 'index'
         path.join(__dirname, './index.web.js')  // 之前创建的 index.web.js 文件路径
     ],
     output: {
@@ -27,10 +28,6 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                // include: [
-                    // anything that needs to be compiled to ES5
-                    // path.resolve(appDirectory, 'src')
-                // ],
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -57,6 +54,7 @@ module.exports = {
                 // usle commonjs modules due to mock haste resolver aliases
                 'react-native$': 'react-native-web/dist/cjs'
             },
+
             // mock haste resolver
             [
                 'ActivityIndicator',
@@ -86,15 +84,8 @@ module.exports = {
                     JSEventLoopWatchdog: 'react-native-web/dist/cjs/vendor/react-native/JSEventLoopWatchdog',
                     React$: 'react',
                     ReactNative$: 'react-native-web/dist/cjs',
-                    AnExSet: path.resolve(__dirname, './src/RNTester/AnimatedGratuitousApp/AnExSet'),
-                    RNTesterBlock: path.resolve(__dirname, './src/RNTester/RNTesterBlock'),
-                    RNTesterPage: path.resolve(__dirname, './src/RNTester/RNTesterPage'),
-                    RNTesterSettingSwitchRow: path.resolve(
-                        __dirname,
-                        './src/RNTester/RNTesterSettingSwitchRow'
-                    ),
                     infoLog$: 'react-native-web/dist/cjs/vendor/react-native/infoLog',
-                    nativeImageSource$: path.resolve(__dirname, './web/nativeImageSource')
+                    nativeImageSource$: path.resolve(__dirname, './nativeImageSource')
                 }
             )
         ),
