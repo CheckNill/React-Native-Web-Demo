@@ -3,6 +3,11 @@
 .DS_Store
 
 # Xcode
+ios/Podfile.lock
+ios/Pods/
+
+#iOS 忽略iOS打包的bundle
+ios/bundle/
 #
 build/
 *.pbxuser
