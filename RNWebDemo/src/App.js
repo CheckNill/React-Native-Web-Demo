@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, ScrollView, View,Text,TouchableOpacity } from 'react-native';
 import { List } from '@ant-design/react-native';
-import { createStackNavigator, createAppContainer,StackViewTransitionConfigs } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 // import HomeScreen from "./MainTabbarPage";
 
 const Item = List.Item;
@@ -87,5 +87,5 @@ const HomeStack = createAppContainer(createStackNavigator(
     }
 ));
 
-// export default HomeStack;
-export default App;
+export default HomeStack;
+// export default App;

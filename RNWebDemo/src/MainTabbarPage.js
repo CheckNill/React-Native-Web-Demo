@@ -21,13 +21,11 @@ export class BasicListExample extends React.Component<any, any> {
                 <List renderHeader={'basic'}>
                     <Item data-seed="logId">
                         标题文字点击无反馈，文字超长则隐藏，文字超长则隐藏
+                    </Item>            
+                    <Item wrap>
+                        文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
                     </Item>
-                </List>
-                <List renderHeader={'带缩略图'}>
-                    <Item thumb="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
-                        thumb
-                    </Item>
-                </List>
+                </List>               
                 <TouchableOpacity
                     onPress={()=>{
                         this.props.navigation.navigate('MainTabNavigator')
